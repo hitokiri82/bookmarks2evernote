@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import codecs
 import argparse
 
+
 class Bookmark():
     """docstring for Bookmark"""
     def __init__(self, title, content, url, tag):
@@ -57,7 +58,7 @@ def main():
                 bookmarks.append(new_bm)
 
         #out = open('outputC.enex', 'w')
-        output_file = args.html_file.split('.')[0]+".enex"
+        output_file = args.html_file.split('.')[0] + ".enex"
         # out = codecs.open('outputC.enex', 'w', encoding='utf-8')
         out = codecs.open(output_file, 'w', encoding='utf-8')
 
@@ -72,10 +73,10 @@ def main():
         out.write("</en-export>")
         out.close()
 
-        print "Success! Output file name: "+output_file
+        print "Success! Output file name: " + output_file
     except:
-        print "Error!" 
+        print "Error!"
 
 
 if __name__ == '__main__':
-  main()
+    main()
